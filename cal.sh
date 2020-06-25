@@ -1,7 +1,7 @@
 #!/bin/bash
 #./cal.sh result/wrk1.txt 1k
 
-PerfPATH=/users/weicuidi/performance_test/result/wrk1.txt
+PerfPATH=/users/weicuidi/performance_test/result/wrk1.txt.bak
 TMPPATH=/users/weicuidi/performance_test/tmp.txt
 RESULT=/users/weicuidi/performance_test/result1.txt
 
@@ -51,4 +51,4 @@ function readfile()
 }
 
 #readfile $1 $2
-readfile $PerfPATH 1k
+readfile $PerfPATH 1
