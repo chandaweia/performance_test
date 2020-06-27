@@ -1,11 +1,11 @@
 #!/bin/bash
 #./cal.sh result/wrk1.txt 1k
 
-PerfPATH=/users/weicuidi/performance_test/result/wrk1.txt.bak
+PerfPATH=/users/weicuidi/performance_test/result/wrk111.txt
 TMPPATH=/users/weicuidi/performance_test/tmp.txt
-RESULT=/users/weicuidi/performance_test/result1.txt
+RESULT=/users/weicuidi/performance_test/result111.txt
 
-echo "Threads,Concurrency,File,50th_latency,99th_latency,Throughput" > $RESULT 
+echo "Threads,Concurrency,File_k,50th_latency,99th_latency,Throughput" > $RESULT 
 
 function get_tc()
 {
@@ -51,4 +51,4 @@ function readfile()
 }
 
 #readfile $1 $2
-readfile $PerfPATH 1
+readfile $PerfPATH 111

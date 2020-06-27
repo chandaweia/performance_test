@@ -1,4 +1,4 @@
-Threads,Concurrency,File,50th_latency,99th_latency,Throughput
+Threads,Concurrency,File_k,50th_latency,99th_latency,Throughput
 
 4,20,1,0.29,3.58,16697.22
 4,100,1,0.57,8.17,103723.79
