@@ -1,9 +1,9 @@
-#!/bin/bash
-#./cal.sh result/wrk1.txt 1k
+#!/bin/bash 
+#./cal.sh inputfile file_k outputfile
+#./cal.sh result/wrk1.txt 1  
 
-PerfPATH=/users/weicuidi/performance_test/result/wrk111.txt
-TMPPATH=/users/weicuidi/performance_test/tmp.txt
-RESULT=/users/weicuidi/performance_test/result111.txt
+WrkPATH=/users/weicuidi/performance_test/result
+RESULT=/users/weicuidi/performance_test/pub_sub_mos-1593292004.txt
 
 echo "Threads,Concurrency,File_k,50th_latency,99th_latency,Throughput" > $RESULT 
 
@@ -47,8 +47,12 @@ function readfile()
 			write_throughput $line
 		fi
 
-	done < $PerfPATH
+	done < $1
 }
 
 #readfile $1 $2
-readfile $PerfPATH 111
+#readfile $1 $WrkPATH/$1 
+echo $RESULT
+readfile $WrkPATH/wrk1-1593292004.txt 1 
+readfile $WrkPATH/wrk11-1593292004.txt 11 
+readfile $WrkPATH/wrk111-1593292004.txt 111 
