@@ -3,7 +3,7 @@
 #./cal.sh result/wrk1.txt 1  
 
 WrkPATH=/users/weicuidi/performance_test/result
-RESULT=/users/weicuidi/performance_test/pub_sub_mos-1593292004.txt
+RESULT=/users/weicuidi/performance_test/midstat-1593297422.txt
 
 echo "Threads,Concurrency,File_k,50th_latency,99th_latency,Throughput" > $RESULT 
 
@@ -53,6 +53,6 @@ function readfile()
 #readfile $1 $2
 #readfile $1 $WrkPATH/$1 
 echo $RESULT
-readfile $WrkPATH/wrk1-1593292004.txt 1 
-readfile $WrkPATH/wrk11-1593292004.txt 11 
-readfile $WrkPATH/wrk111-1593292004.txt 111 
+readfile $WrkPATH/wrk1-1593297422.txt 1 
+readfile $WrkPATH/wrk11-1593297422.txt 11 
+readfile $WrkPATH/wrk111-1593297422.txt 111 
