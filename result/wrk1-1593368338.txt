@@ -1,0 +1,166 @@
+Running 1m test @ http://192.168.1.4/index1.html
+  4 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   563.48us  616.10us  11.45ms   92.20%
+    Req/Sec    10.80k     1.44k   14.34k    55.38%
+  Latency Distribution
+     50%       0.41 ms
+     75%       0.47 ms
+     90%       0.73 ms
+     99%       3.43 ms
+  2577632 requests in 60025083, 3.24GB read
+Requests/sec:  42942.58
+Transfer/sec:     55.34MB
+Running 1m test @ http://192.168.1.4/index1.html
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.65ms    1.64ms  27.33ms   86.06%
+    Req/Sec    17.06k     2.74k   26.58k    65.18%
+  Latency Distribution
+     50%       1.10 ms
+     75%       2.37 ms
+     90%       3.75 ms
+     99%       7.53 ms
+  4073838 requests in 60098935, 5.13GB read
+  Socket errors: connect 0, read 33978, write 0, timeout 0
+Requests/sec:  67785.53
+Transfer/sec:     87.35MB
+Running 1m test @ http://192.168.1.4/index1.html
+  4 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.48ms   15.93ms 440.13ms   98.49%
+    Req/Sec    18.20k   773.01    21.12k    71.67%
+  Latency Distribution
+     50%       4.38 ms
+     75%       5.44 ms
+     90%       7.08 ms
+     99%      88.54 ms
+  4345694 requests in 60026095, 5.47GB read
+  Socket errors: connect 0, read 1411611, write 0, timeout 0
+Requests/sec:  72396.75
+Transfer/sec:     93.28MB
+Running 1m test @ http://192.168.1.4/index1.html
+  4 threads and 1000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    62.74ms  138.73ms   3.62s    90.56%
+    Req/Sec     9.91k     0.86k   13.24k    68.92%
+  Latency Distribution
+     50%      12.43 ms
+     75%      51.25 ms
+     90%     191.91 ms
+     99%     618.57 ms
+  2366522 requests in 60052058, 2.98GB read
+  Socket errors: connect 0, read 560429, write 0, timeout 0
+Requests/sec:  39407.84
+Transfer/sec:     50.77MB
+Running 1m test @ http://192.168.1.4/index1.html
+  10 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   319.87us  365.75us   6.82ms   96.87%
+    Req/Sec     6.71k   824.37     8.80k    63.67%
+  Latency Distribution
+     50%       0.25 ms
+     75%       0.30 ms
+     90%       0.38 ms
+     99%       2.55 ms
+  2864057 requests in 60090994, 3.60GB read
+  Socket errors: connect 20, read 0, write 0, timeout 0
+Requests/sec:  47662.00
+Transfer/sec:     61.42MB
+Running 1m test @ http://192.168.1.4/index1.html
+  10 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.44ms    1.30ms  18.16ms   83.82%
+    Req/Sec     7.55k     1.20k   13.01k    71.05%
+  Latency Distribution
+     50%       1.05 ms
+     75%       2.09 ms
+     90%       3.21 ms
+     99%       5.70 ms
+  4208553 requests in 60098071, 5.30GB read
+  Socket errors: connect 100, read 38840, write 0, timeout 0
+Requests/sec:  70028.09
+Transfer/sec:     90.23MB
+Running 1m test @ http://192.168.1.4/index1.html
+  10 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.40ms   15.26ms 412.44ms   98.58%
+    Req/Sec     7.31k   427.17    20.75k    86.37%
+  Latency Distribution
+     50%       4.39 ms
+     75%       5.58 ms
+     90%       7.21 ms
+     99%      79.46 ms
+  4364337 requests in 60078460, 5.49GB read
+  Socket errors: connect 0, read 1413365, write 0, timeout 0
+Requests/sec:  72643.96
+Transfer/sec:     93.60MB
+Running 1m test @ http://192.168.1.4/index1.html
+  10 threads and 1000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    64.49ms  147.21ms   3.57s    91.97%
+    Req/Sec     3.97k   512.81     7.85k    76.33%
+  Latency Distribution
+     50%      12.54 ms
+     75%      50.32 ms
+     90%     193.83 ms
+     99%     688.09 ms
+  2371890 requests in 60042845, 2.98GB read
+  Socket errors: connect 0, read 559422, write 0, timeout 0
+Requests/sec:  39503.29
+Transfer/sec:     50.90MB
+Running 1m test @ http://192.168.1.4/index1.html
+  20 threads and 20 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   396.67us   79.80us   3.06ms   83.12%
+    Req/Sec     2.39k   111.50     3.57k    76.93%
+  Latency Distribution
+     50%       0.40 ms
+     75%       0.43 ms
+     90%       0.46 ms
+     99%       0.70 ms
+  2855037 requests in 60057080, 3.59GB read
+Requests/sec:  47538.72
+Transfer/sec:     61.26MB
+Running 1m test @ http://192.168.1.4/index1.html
+  20 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     1.42ms    1.24ms  17.39ms   73.04%
+    Req/Sec     3.79k     0.88k    9.07k    68.04%
+  Latency Distribution
+     50%       1.10 ms
+     75%       2.06 ms
+     90%       3.11 ms
+     99%       5.40 ms
+  4411771 requests in 60098359, 5.55GB read
+  Socket errors: connect 100, read 49567, write 0, timeout 0
+Requests/sec:  73409.18
+Transfer/sec:     94.59MB
+Running 1m test @ http://192.168.1.4/index1.html
+  20 threads and 500 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     6.38ms   14.98ms 226.15ms   98.63%
+    Req/Sec     3.65k   196.80     7.37k    74.93%
+  Latency Distribution
+     50%       4.42 ms
+     75%       5.64 ms
+     90%       7.25 ms
+     99%      74.08 ms
+  4360040 requests in 60072969, 5.49GB read
+  Socket errors: connect 0, read 1402970, write 0, timeout 0
+Requests/sec:  72579.07
+Transfer/sec:     93.51MB
+Running 1m test @ http://192.168.1.4/index1.html
+  20 threads and 1000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    65.57ms  150.74ms   3.62s    92.17%
+    Req/Sec     2.00k   327.81    10.57k    77.64%
+  Latency Distribution
+     50%      12.63 ms
+     75%      53.61 ms
+     90%     199.47 ms
+     99%     682.15 ms
+  2385823 requests in 60080413, 3.00GB read
+  Socket errors: connect 0, read 562696, write 0, timeout 0
+Requests/sec:  39710.50
+Transfer/sec:     51.16MB
