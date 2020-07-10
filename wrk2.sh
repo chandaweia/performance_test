@@ -1,46 +1,41 @@
 #!/bin/bash
 timestamp=$(date +%s)
 echo $timestamp
-FILEPATH=./result/$1-11k-$timestamp.txt
+FILEPATH=./n2nresult/$1-11k-$timestamp.txt
+REPORT=./report/$1-11k-$timestamp.csv
 >$FILEPATH
+echo $FILEPATH
 
-URL1=http://192.168.1.4/index.html
-URL2=http://192.168.1.4/index1.html
-URL3=http://192.168.1.4/index111.html
-#Requests
-for i in 500 5000 10000 20000 30000
-do      
-        echo "Welcome $i times"
-	#threads
-	for j in 20
-	do
-		#connections
-		for k in  100
-		do
-			echo "wrk -t ${j} -c ${k} -d30s -R ${i} -file_k 11 --latency $URL1"
-			echo "wrk -t ${j} -c ${k} -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
-			wrk -t${j} -c${k} -d30s -R${i} --latency $URL1 >> $FILEPATH
-		done
+function wrk_test()
+{
+	URL1=http://192.168.1.4:8089
+	#Requests
+	for i in 5000 10000 20000 30000 40000 50000 60000 70000
+	do      
+        	echo "Welcome $i times"
+		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1"
+
+		#echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
+		#wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> $FILEPATH
+		wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> tmp
 		sleep 10
+
+		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
+		wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> $FILEPATH
+        	sleep 10
+
+		#wrk -t20 -c100 -d30s -R${i} --latency $URL2 >> $FILEPATH
+        	#sleep 10
+		#wrk -t20 -c100 -d30s -R${i} --latency $URL3 >> $FILEPATH
+        	#sleep 10
 	done
+}
 
-	for j in 4 10 20
-        do
-                for k in  20 100 500 1000
-                do
-                        echo "wrk -t ${j} -c ${k} -d30s -R ${i} -file_k 1 --latency $URL2" >> $FILEPATH
-                        wrk -t${j} -c${k} -d30s -R${i} --latency $URL2 >> $FILEPATH
-                done
-                sleep 10
-        done
+function report()
+{
+	echo "report:$REPORT"
+	./calwrk2.sh $FILEPATH $REPORT
+}
 
-	for j in 4 10 20
-        do
-                for k in  20 100 500 1000
-                do
-                        echo "wrk -t ${j} -c ${k} -d30s -R ${i} -file_k 111 --latency $URL3" >> $FILEPATH
-                        wrk -t${j} -c${k} -d30s -R${i} --latency $URL3 >> $FILEPATH
-                done
-                sleep 10
-        done
-done
+#wrk_test
+report

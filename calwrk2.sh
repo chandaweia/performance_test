@@ -2,7 +2,8 @@
 #./cal.sh result/wrk1.txt n2n.csv 
 
 #WrkPATH=/users/weicuidi/performance_test/n2nresult
-RESULT=/users/weicuidi/performance_test/report/$2
+#RESULT=/users/weicuidi/performance_test/report/$2
+RESULT=$2
 
 echo "Threads,Concurrency,Request,File_k,50th_latency,99th_latency,Throughput" > $RESULT
 
@@ -17,7 +18,7 @@ function write_throughput()
 function getwrk()
 {
 	echo -n "$3,$5,$8,${10}," >> $RESULT
-	echo "$3,$5,$8,${10},"
+	#echo "$3,$5,$8,${10},"
 }
 
 function readfile()
