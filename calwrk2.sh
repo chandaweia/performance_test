@@ -1,9 +1,8 @@
 #!/bin/bash 
-#./cal.sh inputfile file_k outputfile
-#./cal.sh result/wrk1.txt 1  
+#./cal.sh result/wrk1.txt n2n.csv 
 
-WrkPATH=/users/weicuidi/performance_test/result
-RESULT=/users/weicuidi/performance_test/$2
+#WrkPATH=/users/weicuidi/performance_test/n2nresult
+RESULT=/users/weicuidi/performance_test/report/$2
 
 echo "Threads,Concurrency,Request,File_k,50th_latency,99th_latency,Throughput" > $RESULT
 
@@ -47,7 +46,7 @@ function readfile()
 }
 
 echo $RESULT
-readfile $WrkPATH/$1
+readfile $1
 
 #readfile $1 $2
 #readfile $1 $WrkPATH/$1 
