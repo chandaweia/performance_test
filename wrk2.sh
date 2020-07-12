@@ -1,5 +1,6 @@
 #!/bin/bash
 timestamp=$(date +%s)
+#timestamp=$(date '+%Y%m%d%H%M%S')
 echo $timestamp
 FILEPATH=./n2nresult/$1-11k-$timestamp.txt
 REPORT=./report/$1-11k-$timestamp.csv
