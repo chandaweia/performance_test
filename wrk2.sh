@@ -1,6 +1,6 @@
 #!/bin/bash
-timestamp=$(date +%s)
-#timestamp=$(date '+%Y%m%d%H%M%S')
+#timestamp=$(date +%s)
+timestamp=$(date '+%Y%m%d%H%M%S')
 echo $timestamp
 FILEPATH=./n2nresult/$1-11k-$timestamp.txt
 REPORT=./report/$1-11k-$timestamp.csv
@@ -16,10 +16,9 @@ function wrk_test()
         	echo "Welcome $i times"
 		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1"
 
-		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
-		wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> $FILEPATH
-		#wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> tmp
-		sleep 10
+		#echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
+		#wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> $FILEPATH
+		#sleep 10
 
 		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1" >> $FILEPATH
 		wrk -t20 -c100 -d30s -R${i} --latency $URL1 >> $FILEPATH
