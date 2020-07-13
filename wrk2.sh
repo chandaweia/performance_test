@@ -11,7 +11,7 @@ function wrk_test()
 {
 	URL1=http://192.168.1.4:8089
 	#Requests
-	for i in 30000 50000 100000 150000 200000 300000 400000 500000 600000 700000
+	for i in 30000 50000 100000 150000 200000 300000 400000 500000 600000 700000 800000
 	do      
         	echo "Welcome $i times"
 		echo "wrk -t 20 -c 100 -d30s -R ${i} -file_k 11 --latency $URL1"
