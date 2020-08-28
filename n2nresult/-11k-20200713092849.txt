@@ -1,1 +1,0 @@
-wrk -t 20 -c 100 -d30s -R 30000 -file_k 11 --latency http://192.168.1.4:8089

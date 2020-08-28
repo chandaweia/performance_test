@@ -1,0 +1,55 @@
+wrk -t 40 -c 100 -d30s -R 20000 -file_k 11 --latency http://10.10.1.2:8089
+Running 30s test @ http://10.10.1.2:8089
+  20 threads and 100 connections
+  Thread calibration: mean lat.: 1983.461ms, rate sampling interval: 10625ms
+  Thread calibration: mean lat.: 1972.675ms, rate sampling interval: 10543ms
+  Thread calibration: mean lat.: 2020.627ms, rate sampling interval: 10698ms
+  Thread calibration: mean lat.: 2014.525ms, rate sampling interval: 10731ms
+  Thread calibration: mean lat.: 2002.481ms, rate sampling interval: 10207ms
+  Thread calibration: mean lat.: 2006.402ms, rate sampling interval: 10756ms
+  Thread calibration: mean lat.: 2060.935ms, rate sampling interval: 10944ms
+  Thread calibration: mean lat.: 1916.675ms, rate sampling interval: 10207ms
+  Thread calibration: mean lat.: 1976.515ms, rate sampling interval: 10207ms
+  Thread calibration: mean lat.: 1988.737ms, rate sampling interval: 10100ms
+  Thread calibration: mean lat.: 1987.717ms, rate sampling interval: 10256ms
+  Thread calibration: mean lat.: 1975.922ms, rate sampling interval: 10280ms
+  Thread calibration: mean lat.: 1973.349ms, rate sampling interval: 10256ms
+  Thread calibration: mean lat.: 1946.512ms, rate sampling interval: 10231ms
+  Thread calibration: mean lat.: 1993.931ms, rate sampling interval: 10493ms
+  Thread calibration: mean lat.: 1993.451ms, rate sampling interval: 10412ms
+  Thread calibration: mean lat.: 2001.577ms, rate sampling interval: 10493ms
+  Thread calibration: mean lat.: 1976.047ms, rate sampling interval: 10362ms
+  Thread calibration: mean lat.: 2020.841ms, rate sampling interval: 10518ms
+  Thread calibration: mean lat.: 2022.383ms, rate sampling interval: 10567ms
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     -nanus    -nanus   0.00us    0.00%
+    Req/Sec     0.00      0.00     0.00    100.00%
+  Latency Distribution (HdrHistogram - Recorded Latency)
+ 50.000%    0.00us
+ 75.000%    0.00us
+ 90.000%    0.00us
+ 99.000%    0.00us
+ 99.900%    0.00us
+ 99.990%    0.00us
+ 99.999%    0.00us
+100.000%    0.00us
+
+  Detailed Percentile spectrum:
+       Value   Percentile   TotalCount 1/(1-Percentile)
+
+       0.000     1.000000            0          inf
+#[Mean    =         -nan, StdDeviation   =         -nan]
+#[Max     =        0.000, Total count    =            0]
+#[Buckets =           27, SubBuckets     =         2048]
+----------------------------------------------------------
+  2743 requests in 30.05s, 28.76MB read
+  Socket errors: connect 0, read 0, write 0, timeout 1100
+Requests/sec:     91.29
+Transfer/sec:      0.96MB
+wrk -t 40 -c 100 -d30s -R 30000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 50000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 60000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 70000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 80000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 90000 -file_k 11 --latency http://10.10.1.2:8089
+wrk -t 40 -c 100 -d30s -R 100000 -file_k 11 --latency http://10.10.1.2:8089
